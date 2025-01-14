@@ -1,0 +1,8 @@
+STATE_NAME
+----------
+california
+ohio
+north dakota
+new york
+colorado
+new jersey

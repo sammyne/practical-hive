@@ -1,5 +1,8 @@
 # Practical Hive
 
+## 环境
+- hive v4.0.1
+
 ## 快速开始
 
 ### 启动 hive 服务

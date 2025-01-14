@@ -11,9 +11,22 @@ case "$1" in
     docker stop $name
   ;;
 
+  bash)
+    docker exec -it $name bash
+  ;;
+
   up)
     version=4.0.1
-    docker run -d --rm -p 10000:10000 -p 10002:10002 --env SERVICE_NAME=hiveserver2 --name $name apache/hive:$version
+
+    # 选项说明
+    # --user root : 避免没有权限创建文件或目录。
+    docker run -d --rm                \
+      -p 10000:10000                  \
+      -p 10002:10002                  \
+      --env SERVICE_NAME=hiveserver2  \
+      --name $name                    \
+      -v $PWD:/data                   \
+      --user root apache/hive:$version
   ;;
 
   *)
