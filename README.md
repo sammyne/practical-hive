@@ -17,3 +17,4 @@ bash cli.sh beeline
 
 ## 参考文献
 - https://hub.docker.com/r/apache/hive
+- https://github.com/Apress/practical-hive
